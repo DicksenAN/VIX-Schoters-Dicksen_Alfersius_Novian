@@ -34,14 +34,14 @@
         android:maxLines="3"
         android:text="News Title"
         android:textColor="@color/black"
-        android:textSize="16dp"
+        android:textSize="16sp"
         android:textStyle="normal"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvNewsSource" />
 
     <TextView
         android:id="@+id/tvPublishDate"
-        android:layout_width="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:text="PUBLISH DATE"

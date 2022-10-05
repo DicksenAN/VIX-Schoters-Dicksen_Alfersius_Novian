@@ -1,8 +1,38 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:startDestination="@layout/activity_main">
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/newsListFragment">
 
+    <fragment
+        android:id="@+id/newsListFragment"
+        android:name="com.example.vix_schoters_dicksenalfersiusnovian.ui.fragments.NewsListFragment"
+        android:label="NewsListFragment" >
+        <action
+            android:id="@+id/action_newsListFragment_to_newsFragment"
+            app:destination="@id/newsFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="com.example.vix_schoters_dicksenalfersiusnovian.ui.fragments.NewsFragment"
+        android:label="NewsFragment"
+        >
+        <argument
+            android:name="article"
+            app:argType="com.example.vix_schoters_dicksenalfersiusnovian.models.Article" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsBookmark"
+        android:name="com.example.vix_schoters_dicksenalfersiusnovian.ui.fragments.BookmarkedNewsFragment"
+        android:label="BookmarkedNewsFragment" >
+        <action
+            android:id="@+id/action_bookmarkedNewsFragment_to_newsFragment"
+            app:destination="@id/newsFragment"/>
+    </fragment>
 
-    <fragment android:id="@+id/placeholder" />
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.example.vix_schoters_dicksenalfersiusnovian.ui.fragments.ProfileFragment"
+        android:label="ProfileFragment" >
+    </fragment>
 </navigation>
